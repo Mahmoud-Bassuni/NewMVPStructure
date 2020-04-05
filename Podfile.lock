@@ -1,0 +1,32 @@
+PODS:
+  - IQKeyboardManagerSwift (6.4.2)
+  - Kingfisher (5.9.0):
+    - Kingfisher/Core (= 5.9.0)
+  - Kingfisher/Core (5.9.0)
+  - SVProgressHUD (2.2.5)
+  - SwiftMessages (5.0.1):
+    - SwiftMessages/App (= 5.0.1)
+  - SwiftMessages/App (5.0.1)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift (= 6.4.2)
+  - Kingfisher (~> 5.9.0)
+  - SVProgressHUD
+  - SwiftMessages (~> 5.0.1)
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - SVProgressHUD
+    - SwiftMessages
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 79a3ec200dfb41cb66a89b8575417b5378107c5d
+  Kingfisher: ff98240aebb7302bdc4f1ecd701761030ce18b16
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftMessages: 32ce3cfc8388b41aae56ff4853cc752a20101147
+
+PODFILE CHECKSUM: ba667a527680f8f4741111e4f2d2e902e043c356
+
+COCOAPODS: 1.9.0

@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-NewMVPStructure/Pods-NewMVPStructure-resources.sh
+${PODS_ROOT}/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle
+${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/SwiftMessages/SwiftMessages.bundle

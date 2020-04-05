@@ -1,0 +1,6 @@
+framework module Pods_NewMVPStructureTests {
+  umbrella header "Pods-NewMVPStructureTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
