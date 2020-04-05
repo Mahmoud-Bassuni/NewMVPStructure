@@ -222,7 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				1E6FB111242E87590050D727 /* MVP Abstractions */,
-				1E973A402434EDC1001A9A41 /* Repository */,
+				1E973A402434EDC1001A9A41 /* Repository Management */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -569,7 +569,7 @@
 			path = Abstraction;
 			sourceTree = "<group>";
 		};
-		1E973A402434EDC1001A9A41 /* Repository */ = {
+		1E973A402434EDC1001A9A41 /* Repository Management */ = {
 			isa = PBXGroup;
 			children = (
 				1E973A4F243507EE001A9A41 /* View */,
@@ -578,7 +578,7 @@
 				1E973A412434F131001A9A41 /* Adapters */,
 				1E973A5024350806001A9A41 /* RepositoryProtocol.swift */,
 			);
-			path = Repository;
+			path = "Repository Management";
 			sourceTree = "<group>";
 		};
 		1E973A412434F131001A9A41 /* Adapters */ = {
