@@ -11,13 +11,21 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    
+    var coordinator: MainCoordinator?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            self.window!.rootViewController =  UINavigationController(rootViewController: RepositoryViewController.init())
-            self.window!.makeKeyAndVisible()
-            return true
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let navController = UINavigationController()
+        // send that into our coordinator so that it can display view controllers
+        coordinator = MainCoordinator(navigationController: navController)
+        // tell the coordinator to take over control
+        coordinator?.start()
+
+        window?.rootViewController = navController
+        window?.makeKeyAndVisible()
+        
+        
+        return true
     }
     
 }

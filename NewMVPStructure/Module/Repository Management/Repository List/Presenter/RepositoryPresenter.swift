@@ -49,7 +49,7 @@ class RepositoryPresenter: MVPPresenter<RepositoryViewController>, RepositoryPre
     
     func repositoryClicked(repo: RepositoryCodableModel, index: Int) {
         view().vibrate()
-        view().showAlertMessage(type: .info, message: repo.name,nil)
+        view().coordinator?.RepositoryDetails()
     }
     
     func paginate(toPage: Int) {

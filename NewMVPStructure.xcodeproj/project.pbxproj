@@ -23,6 +23,10 @@
 		1E396465242E6BA200D20D78 /* Extension+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E396464242E6BA200D20D78 /* Extension+UIButton.swift */; };
 		1E396467242E700100D20D78 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E396466242E700100D20D78 /* Constants.swift */; };
 		1E396469242E70F100D20D78 /* Extension+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E396468242E70F100D20D78 /* Extension+UILabel.swift */; };
+		1E530D6E243B80EF00B1FB71 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E530D6D243B80EF00B1FB71 /* Coordinator.swift */; };
+		1E530D70243B814600B1FB71 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E530D6F243B814600B1FB71 /* MainCoordinator.swift */; };
+		1E530D79243B860700B1FB71 /* RepositoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E530D77243B860700B1FB71 /* RepositoryDetailsViewController.swift */; };
+		1E530D7A243B860700B1FB71 /* RepositoryDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E530D78243B860700B1FB71 /* RepositoryDetailsViewController.xib */; };
 		1E6FB113242E87810050D727 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6FB112242E87810050D727 /* BaseViewController.swift */; };
 		1E6FB117242E87FF0050D727 /* DesignerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6FB116242E87FF0050D727 /* DesignerProtocol.swift */; };
 		1E6FB11A242E883B0050D727 /* MVPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6FB119242E883B0050D727 /* MVPViewController.swift */; };
@@ -103,6 +107,10 @@
 		1E396464242E6BA200D20D78 /* Extension+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIButton.swift"; sourceTree = "<group>"; };
 		1E396466242E700100D20D78 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1E396468242E70F100D20D78 /* Extension+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UILabel.swift"; sourceTree = "<group>"; };
+		1E530D6D243B80EF00B1FB71 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1E530D6F243B814600B1FB71 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		1E530D77243B860700B1FB71 /* RepositoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewController.swift; sourceTree = "<group>"; };
+		1E530D78243B860700B1FB71 /* RepositoryDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailsViewController.xib; sourceTree = "<group>"; };
 		1E6FB112242E87810050D727 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1E6FB116242E87FF0050D727 /* DesignerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignerProtocol.swift; sourceTree = "<group>"; };
 		1E6FB119242E883B0050D727 /* MVPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPViewController.swift; sourceTree = "<group>"; };
@@ -221,7 +229,6 @@
 		1E396455242E3B0500D20D78 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				1E6FB111242E87590050D727 /* MVP Abstractions */,
 				1E973A402434EDC1001A9A41 /* Repository Management */,
 			);
 			path = Module;
@@ -311,6 +318,52 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		1E530D71243B84D900B1FB71 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1E530D6F243B814600B1FB71 /* MainCoordinator.swift */,
+				1E530D6D243B80EF00B1FB71 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1E530D73243B852500B1FB71 /* Abstractions */ = {
+			isa = PBXGroup;
+			children = (
+				1E6FB111242E87590050D727 /* MVP */,
+				1E530D71243B84D900B1FB71 /* Coordinator */,
+			);
+			path = Abstractions;
+			sourceTree = "<group>";
+		};
+		1E530D74243B857F00B1FB71 /* Repository List */ = {
+			isa = PBXGroup;
+			children = (
+				1E973A4F243507EE001A9A41 /* View */,
+				1E973A412434F131001A9A41 /* Adapters */,
+				1E973A4E243507E9001A9A41 /* Presenter */,
+				1E973A5024350806001A9A41 /* RepositoryProtocol.swift */,
+			);
+			path = "Repository List";
+			sourceTree = "<group>";
+		};
+		1E530D75243B85A300B1FB71 /* RepositoryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				1E530D76243B85E300B1FB71 /* View */,
+			);
+			path = RepositoryDetails;
+			sourceTree = "<group>";
+		};
+		1E530D76243B85E300B1FB71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1E530D77243B860700B1FB71 /* RepositoryDetailsViewController.swift */,
+				1E530D78243B860700B1FB71 /* RepositoryDetailsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1E6FB110242E85550050D727 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,14 +371,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		1E6FB111242E87590050D727 /* MVP Abstractions */ = {
+		1E6FB111242E87590050D727 /* MVP */ = {
 			isa = PBXGroup;
 			children = (
 				1E6FB114242E87BA0050D727 /* BaseViewController */,
 				1E6FB115242E87E40050D727 /* Designer */,
 				1E6FB118242E88230050D727 /* MVP */,
 			);
-			path = "MVP Abstractions";
+			path = MVP;
 			sourceTree = "<group>";
 		};
 		1E6FB114242E87BA0050D727 /* BaseViewController */ = {
@@ -529,6 +582,7 @@
 			isa = PBXGroup;
 			children = (
 				1E396454242E3AEB00D20D78 /* Application */,
+				1E530D73243B852500B1FB71 /* Abstractions */,
 				1E396455242E3B0500D20D78 /* Module */,
 				1E396456242E3B2B00D20D78 /* Service */,
 				1E396457242E3B3F00D20D78 /* Repositories */,
@@ -572,10 +626,8 @@
 		1E973A402434EDC1001A9A41 /* Repository Management */ = {
 			isa = PBXGroup;
 			children = (
-				1E973A4F243507EE001A9A41 /* View */,
-				1E973A412434F131001A9A41 /* Adapters */,
-				1E973A4E243507E9001A9A41 /* Presenter */,
-				1E973A5024350806001A9A41 /* RepositoryProtocol.swift */,
+				1E530D74243B857F00B1FB71 /* Repository List */,
+				1E530D75243B85A300B1FB71 /* RepositoryDetails */,
 			);
 			path = "Repository Management";
 			sourceTree = "<group>";
@@ -776,6 +828,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E6FB147242EA5D50050D727 /* LaunchScreen.storyboard in Resources */,
+				1E530D7A243B860700B1FB71 /* RepositoryDetailsViewController.xib in Resources */,
 				1E395D6C2435F064003D53E1 /* Color.xcassets in Resources */,
 				1E973A4B243505A2001A9A41 /* RepositoryViewController.xib in Resources */,
 				1E6FB150242EA6940050D727 /* transaction.mp3 in Resources */,
@@ -931,6 +984,7 @@
 				1E6FB13E242E9EAE0050D727 /* APIException.swift in Sources */,
 				1E6FB131242E99730050D727 /* DeviceServiceProtocol.swift in Sources */,
 				1E973A392434D8DE001A9A41 /* ServiceMethod.swift in Sources */,
+				1E530D6E243B80EF00B1FB71 /* Coordinator.swift in Sources */,
 				1E973A372434D8BC001A9A41 /* ServiceLayer.swift in Sources */,
 				1E396469242E70F100D20D78 /* Extension+UILabel.swift in Sources */,
 				1E6FB12D242E98E20050D727 /* AppService.swift in Sources */,
@@ -942,6 +996,7 @@
 				1E94AF78242DFC0E006E9FA5 /* AppDelegate.swift in Sources */,
 				1E6FB11A242E883B0050D727 /* MVPViewController.swift in Sources */,
 				1E6FB120242E8AF80050D727 /* Extension+UIWindow.swift in Sources */,
+				1E530D70243B814600B1FB71 /* MainCoordinator.swift in Sources */,
 				1E6FB127242E97A00050D727 /* DateService.swift in Sources */,
 				1E396467242E700100D20D78 /* Constants.swift in Sources */,
 				1EC8FD4F242E806A002FA541 /* Extension+UIViewController.swift in Sources */,
@@ -956,6 +1011,7 @@
 				1E6FB15F242EA8FD0050D727 /* AppDef.swift in Sources */,
 				1E973A5124350806001A9A41 /* RepositoryProtocol.swift in Sources */,
 				1E1A77E524392E9B00364815 /* PagingTableView22.swift in Sources */,
+				1E530D79243B860700B1FB71 /* RepositoryDetailsViewController.swift in Sources */,
 				1E6FB163242EA9490050D727 /* LanguageDef.swift in Sources */,
 				1E973A4D243505C0001A9A41 /* RepositoryDesigner.swift in Sources */,
 			);

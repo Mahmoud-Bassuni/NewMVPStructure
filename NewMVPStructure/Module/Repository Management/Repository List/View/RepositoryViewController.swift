@@ -9,9 +9,9 @@
 import UIKit
 
 class RepositoryViewController:  MVPViewController, RepositoryViewProtocol   {
-    
+   
     @IBOutlet weak var repositoryTableView: PagingTableView!
-    
+    weak var coordinator: MainCoordinator?
     private var presenter: RepositoryPresenterProtocol = RepositoryPresenter()
     private var repositorydapter : RepositoryTableViewAdapter?
     

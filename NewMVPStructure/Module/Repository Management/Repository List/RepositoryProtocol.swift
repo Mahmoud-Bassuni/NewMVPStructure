@@ -14,6 +14,7 @@ protocol RepositoryViewProtocol: MVPViewProtocol {
     func endRefreshing()
     func beginRefreshing()
     func isTableFooterLoading(loading: Bool)
+    var coordinator : MainCoordinator?  { get set }
 }
 
 protocol RepositoryPresenterProtocol: MVPPresenterProtocol {
