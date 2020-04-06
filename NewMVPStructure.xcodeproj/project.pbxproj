@@ -58,7 +58,7 @@
 		1E973A3B2434D98E001A9A41 /* ServiceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E973A3A2434D98E001A9A41 /* ServiceResult.swift */; };
 		1E973A432434F2D6001A9A41 /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E973A422434F2D6001A9A41 /* RepositoryTableViewCell.xib */; };
 		1E973A4824350477001A9A41 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E973A4724350477001A9A41 /* RepositoryTableViewCell.swift */; };
-		1E973A4B243505A2001A9A41 /* RepositoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E973A4A243505A2001A9A41 /* RepositoryView.xib */; };
+		1E973A4B243505A2001A9A41 /* RepositoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E973A4A243505A2001A9A41 /* RepositoryViewController.xib */; };
 		1E973A4D243505C0001A9A41 /* RepositoryDesigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E973A4C243505C0001A9A41 /* RepositoryDesigner.swift */; };
 		1E973A5124350806001A9A41 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E973A5024350806001A9A41 /* RepositoryProtocol.swift */; };
 		1E973A5324350A3B001A9A41 /* RepositoryTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E973A5224350A3B001A9A41 /* RepositoryTableViewAdapter.swift */; };
@@ -146,7 +146,7 @@
 		1E973A3A2434D98E001A9A41 /* ServiceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResult.swift; sourceTree = "<group>"; };
 		1E973A422434F2D6001A9A41 /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
 		1E973A4724350477001A9A41 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
-		1E973A4A243505A2001A9A41 /* RepositoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryView.xib; sourceTree = "<group>"; };
+		1E973A4A243505A2001A9A41 /* RepositoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryViewController.xib; sourceTree = "<group>"; };
 		1E973A4C243505C0001A9A41 /* RepositoryDesigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDesigner.swift; sourceTree = "<group>"; };
 		1E973A5024350806001A9A41 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		1E973A5224350A3B001A9A41 /* RepositoryTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewAdapter.swift; sourceTree = "<group>"; };
@@ -573,9 +573,8 @@
 			isa = PBXGroup;
 			children = (
 				1E973A4F243507EE001A9A41 /* View */,
-				1E973A4E243507E9001A9A41 /* Presenter */,
-				1E973A4924350586001A9A41 /* UI */,
 				1E973A412434F131001A9A41 /* Adapters */,
+				1E973A4E243507E9001A9A41 /* Presenter */,
 				1E973A5024350806001A9A41 /* RepositoryProtocol.swift */,
 			);
 			path = "Repository Management";
@@ -616,15 +615,6 @@
 			path = RepositoryTableViewCell;
 			sourceTree = "<group>";
 		};
-		1E973A4924350586001A9A41 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				1E973A4A243505A2001A9A41 /* RepositoryView.xib */,
-				1E973A4C243505C0001A9A41 /* RepositoryDesigner.swift */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
 		1E973A4E243507E9001A9A41 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,7 +626,9 @@
 		1E973A4F243507EE001A9A41 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1E973A4A243505A2001A9A41 /* RepositoryViewController.xib */,
 				1E395D662435CA47003D53E1 /* RepositoryViewController.swift */,
+				1E973A4C243505C0001A9A41 /* RepositoryDesigner.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -785,7 +777,7 @@
 			files = (
 				1E6FB147242EA5D50050D727 /* LaunchScreen.storyboard in Resources */,
 				1E395D6C2435F064003D53E1 /* Color.xcassets in Resources */,
-				1E973A4B243505A2001A9A41 /* RepositoryView.xib in Resources */,
+				1E973A4B243505A2001A9A41 /* RepositoryViewController.xib in Resources */,
 				1E6FB150242EA6940050D727 /* transaction.mp3 in Resources */,
 				1E6FB14A242EA62F0050D727 /* Localizable.strings in Resources */,
 				1E94AF81242DFC10006E9FA5 /* Assets.xcassets in Resources */,

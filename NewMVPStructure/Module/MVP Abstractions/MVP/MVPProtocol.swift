@@ -10,8 +10,6 @@ import SwiftMessages
 
 protocol MVPViewProtocol{ // from the presenter to view
     
-    func showTopAlertMessage(type: Theme, message: String, _ retryBlock:(() -> Void)?)
-
     func showAlertMessage(type: Theme, message: String, _ retryBlock:(() -> Void)?)
 
     func vibrate(feedback: UINotificationFeedbackGenerator.FeedbackType)

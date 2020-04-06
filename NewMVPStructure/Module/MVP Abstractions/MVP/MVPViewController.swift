@@ -12,63 +12,45 @@ import SVProgressHUD
 class MVPViewController: BaseViewController, MVPViewProtocol {
     
     func vibrate(feedback: UINotificationFeedbackGenerator.FeedbackType) {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(feedback)
+        self.vibrateView(feedback :feedback)
     }
-
+    
     func vibrate(style: UIImpactFeedbackGenerator.FeedbackStyle) {
-        let generator = UIImpactFeedbackGenerator(style: style)
-        generator.impactOccurred()
+        self.vibrateView(style :style)
     }
-
+    
     func vibrate() {
-        let generator = UISelectionFeedbackGenerator()
-        generator.selectionChanged()
+        self.vibrateView()
     }
-
+    
     func showAlertMessage(type: Theme, message: String, _ retryBlock: (() -> Void)?) {
-        self.showAlertMessage(layout: MessageView.Layout.cardView, type: type, message: message, retryBlock)
+        self.showMessage(type: type, message: message, retryBlock)
     }
-
-    func showTopAlertMessage(type: Theme, message: String, _ retryBlock: (() -> Void)?) {
-        self.showAlertMessage(layout: MessageView.Layout.tabView, type: type, message: message, retryBlock)
-    }
-
+    
     func reloadLanguage() {
-        UIView.appearance().semanticContentAttribute = self.isArabic() ? .forceRightToLeft : .forceLeftToRight
-        UILabel.appearance().semanticContentAttribute = self.isArabic() ? .forceRightToLeft : .forceLeftToRight
-        UIButton.appearance().semanticContentAttribute = self.isArabic() ? .forceRightToLeft : .forceLeftToRight
-        UINavigationBar.appearance().semanticContentAttribute = self.isArabic() ? .forceRightToLeft : .forceLeftToRight
-        UIStackView.appearance().semanticContentAttribute = self.isArabic() ? .forceRightToLeft : .forceLeftToRight
-        UISearchBar.appearance().semanticContentAttribute = self.isArabic() ? .forceRightToLeft : .forceLeftToRight
-        UITabBar.appearance().semanticContentAttribute = self.isArabic() ? .forceRightToLeft : .forceLeftToRight
-        UICollectionView.appearance().semanticContentAttribute = self.isArabic() ? .forceRightToLeft : .forceLeftToRight
-        UISwitch.appearance().semanticContentAttribute = self.isArabic() ? .forceRightToLeft : .forceLeftToRight
+        self.reloadView()
     }
-
+    
     func switchRoot(viewController: UIViewController, dismiss: Bool) {
-        if dismiss { UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: false, completion: nil)
-        }
-        UIApplication.shared.windows.first?.switchRootViewController(to: viewController, animated: true, duration: 0.3, options: .transitionCrossDissolve, nil)
+        self.switchRootVC(viewController: viewController, dismiss: dismiss)
     }
     
     func dismissKeyboardWhenTap() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
-        tap.cancelsTouchesInView = false
-        self.view.addGestureRecognizer(tap)
+        self.dismissKeyboard()
     }
-   
+    
     func showLoading()
     {
-        SVProgressHUD.show(withStatus: "")
+        self.showLoader()
     }
     
     func hideLoading()
     {
-       SVProgressHUD.dismiss()
+        self.hideLoader()
     }
     
-    @objc func hideKeyboard() {
-        view.endEditing(true)
+    func hideKeyboard() {
+        self.dismissKeyboard()
     }
+    
 }
